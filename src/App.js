@@ -1,25 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './views/Layout/theme/theme';
+
+// import Landingpage from './views/Pages/Landingpage/Landingpage';
+import Dashboard from './views/Pages/Landingpage/Dashboard';
+
+
+import { Provider } from 'react-redux';
+import store from './states/store';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Provider store = { store }>
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+              {/* <Route exact path="/login" component={Login}/>
+              <Route exact path="/crearcuenta" component={SignUp}/>
+              <Route exact path="/carrito" component={CarritoPage}/> */}
+              {/* <Route exact path="/mp" component={mercadoPagoComp}/> */}
+              {/* <RutaPrivadaCheckOut exact path="/checkout" component={Checkout}/>
+              <RutaPrivada exact path={`/cuenta/:panel`} component={cuentaPage}/>
+              <RutaPrivada exact path={`/transaccion`} component={Transaccion}/> */}
+            </Switch>
+          </Provider>
+        </Router>
+      </ThemeProvider>
+
+    </Fragment>
   );
 }
 
