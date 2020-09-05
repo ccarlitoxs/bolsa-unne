@@ -7,10 +7,12 @@ import theme from './views/Layout/theme/theme';
 
 // import Landingpage from './views/Pages/Landingpage/Landingpage';
 import Dashboard from './views/Pages/Landingpage/Dashboard';
-
+import Login from './views/Pages/Auth/Login';
+import SignUp from './views/Pages/Auth/SignUp';
 
 import { Provider } from 'react-redux';
 import store from './states/store';
+import RutaPrivada from './components/RutaPrivada';
 
 
 
@@ -23,14 +25,13 @@ function App() {
         <Router>
           <Provider store = { store }>
             <Switch>
+              {/* <RutaPrivada exact path="/" component={Dashboard} /> */}
               <Route exact path="/" component={Dashboard} />
-              {/* <Route exact path="/login" component={Login}/>
+              <Route exact path="/login" component={Login}/>
               <Route exact path="/crearcuenta" component={SignUp}/>
-              <Route exact path="/carrito" component={CarritoPage}/> */}
-              {/* <Route exact path="/mp" component={mercadoPagoComp}/> */}
-              {/* <RutaPrivadaCheckOut exact path="/checkout" component={Checkout}/>
-              <RutaPrivada exact path={`/cuenta/:panel`} component={cuentaPage}/>
-              <RutaPrivada exact path={`/transaccion`} component={Transaccion}/> */}
+              
+              {/* <RutaPrivada exact path={`/cuenta/:panel`} component={cuentaPage}/> */}
+
             </Switch>
           </Provider>
         </Router>

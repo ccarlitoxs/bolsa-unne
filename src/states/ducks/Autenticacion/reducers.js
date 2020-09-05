@@ -14,16 +14,7 @@ const initialState = {
     usuario: null,
     mensaje: null,
     cargando: true,
-    notificaciones: [],
-    direcciones:[{
-        "dom_id": 8405,
-        "domicilio": "B. STA. INES PC.12 CASA 84 M:135",
-        "ciudad": "RESISTENCIA",
-        "provincia":"CHACO",
-        "cod_postal": 3500,
-        "latitud": null,
-        "longitud": null,
-      }]
+    notificaciones: []
 }
 
 export default function authReducer(state = initialState, action ) {

@@ -11,15 +11,7 @@ const apiCall = (useBaseUrl,url,method,data,token) => {
                 completeUrl = process.env.REACT_APP_BACKEND_URL + url;
                 headers= {'Accept': 'application/json',}
                 break;
-            case 'apiPaljet':
-                completeUrl = 'http://181.105.127.194:8080/' + url;
-                //completeUrl = 'http://192.168.1.150:8080/' + url;
-                headers = { 
-                    'accept': 'application/json',
-                    'EmpID': 1,
-                    'authorization': 'Basic SVZBTjI6SVZBTklWQU4y'
-                };
-                break;
+
         
             default:
                 completeUrl = url

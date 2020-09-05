@@ -19,7 +19,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Alert from '@material-ui/lab/Alert';
 
-import LogoEmpresa from '../../assets/images/Logo-840x840.png';
+// import Logo from '../../assets/images/Logo-840x840.png';
 
 
 function Copyright() {
@@ -27,7 +27,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Casa Carlitos
+        Simulador de Bolsa UNNE
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: `url(${LogoEmpresa})`,
+    // backgroundImage: `url(${Logo})`, TODO: PONER UN LOGO PARA EL INICIO DE SESION
     backgroundRepeat: 'no-repeat',
     backgroundColor: '#ffffff',
     backgroundSize: 'contain',

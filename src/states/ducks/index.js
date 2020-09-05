@@ -3,7 +3,7 @@ import { all } from 'redux-saga/effects';
 
 import instaReducer from './InstagramDuck';
 import authReducer from './Autenticacion/reducers';
-import carritoReducer from './Carrito/reducers';
+import ordenesReducer from './Ordenes/reducers';
 import commerceReducer from './Commerce/reducers';
 import alertaReducer from './Alertas/reducers';
 
@@ -14,7 +14,7 @@ import WatchCommerce from './Commerce/operations';
 export default combineReducers({
     auth: authReducer,
     instaFeed: instaReducer,
-    carrito: carritoReducer,
+    ordenes: ordenesReducer,
     commerce: commerceReducer,
     alerta: alertaReducer
 });

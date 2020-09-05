@@ -25,7 +25,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Casa Carlitos
+        Simulador de Bolsa UNNE
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -94,7 +94,7 @@ export default function SignUp(props) {
       indicacion: '',
       localidad: '',
       provincia: '',
-      codigoPostal: ''
+      numeroLibreta: ''
 
   });
 
@@ -104,7 +104,7 @@ export default function SignUp(props) {
     indicacion,
     localidad,
     provincia,
-    codigoPostal } = usuario;
+    numeroLibreta } = usuario;
 
   const onChange = e => {
       guardarUsuario({
@@ -127,7 +127,7 @@ export default function SignUp(props) {
           indicacion.trim() === '' ||
           localidad.trim() === '' ||
           provincia.trim() === '' ||
-          codigoPostal.trim() === '' ) {
+          numeroLibreta.trim() === '' ) {
               dispatch(mostrarAlerta('Todos los campos son obligatorios', 'error'));
               setTimeout(() => {
                 dispatch(ocultarAlerta());
@@ -164,7 +164,7 @@ export default function SignUp(props) {
           indicacion,
           localidad,
           provincia,
-          codigoPostal
+          numeroLibreta
       }));
   }
 
@@ -270,11 +270,11 @@ export default function SignUp(props) {
               <TextField
                 required
                 variant="outlined"
-                id="codigoPostal"
-                name="codigoPostal"
-                label="Código Postal"
+                id="numeroLibreta"
+                name="numeroLibreta"
+                label="Número LU"
                 fullWidth 
-                value={codigoPostal}
+                value={numeroLibreta}
                 autoComplete="off"
                 onChange={onChange}
                 
@@ -326,7 +326,7 @@ export default function SignUp(props) {
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="Quiero recibir contenido de marketing, promociones y actualizaciones vía email."
+                label="Acepto todos los términos y condiciones"
               />
             </Grid>
           </Grid>
